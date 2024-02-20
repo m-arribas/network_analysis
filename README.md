@@ -1,5 +1,6 @@
 # Network Analysis 
-This repository contains the code used for data analysis in the manuscript titled *"[Your Manuscript Title]"*. The purpose of this project is to provide a **transparent** and **reproducible** method for analyzing the data presented in our publication, as well as making code publically avaiable for researchers interested in using network analyses with their own databases.
+This repository contains the code used for data analysis in the manuscript titled *"Longitudinal evolution of the transdiagnostic prodrome to severe mental disorders: 
+a dynamic temporal network analysis informed by natural language processing and electronic health records" by Arribas et al (in press).* The purpose of this project is to provide a **transparent** and **reproducible** method for analyzing the data presented in our publication, as well as making code publically avaiable for researchers interested in using network analyses with their own databases.
 
 Network analysis allows us to statistically model the relationships between nodes (prodromal features) connected by edges (directed and undirected relationships) within a network (prodrome) and how these change over time. Weak, sparsely connected networks are more modifiable, while stronger, densely connected networks resist change and need greater disruption through higher intensity interventions to alter the state (e.g. prevent disorder onset). Furthermore, edge estimates for temporal nodes may indicate directed causality between network features, which may aid understanding of the development of these disorders. Similarly, the centrality of a node, which represents the relative strength of connections in and out of the node, may signal the importance of that node to the disorder and as a potential intervention target.
 
@@ -44,4 +45,3 @@ This project is licensed under the Apache License - see the LICENSE.md file for 
 Special thanks to josephmbarnby for their repository [ParanoiaLongitudinalNetworkAnalysis]. This project's code has been largely adapted (with permission) from their work. Check out the original repository here: https://github.com/josephmbarnby/ParanoiaLongitudinalNetworkAnalysis.git. Their contributions have been invaluable in the development of this project.
 
 MA is supported by the UK Medical Research Council (MR/N013700/1) and King’s College London member of the MRC Doctoral Training Partnership in Biomedical Sciences. JMB has received funding from the Wellcome Trust (WT228268/Z/23/Z). 
-
