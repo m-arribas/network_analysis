@@ -10,8 +10,8 @@ library(standardize)
 
 # Feature variables ------------------------------------------------------------------------------
 
-# total_cleaned <- read.csv("path/to/your/data.csv") # Load data as CSV
-total_cleaned <- read.csv("/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/final/data/dynamic_syn.csv") # Synthetic Data in Git
+# Load data as CSV
+total_cleaned <- read.csv("/path/to/file/dynamic_syn.csv") # Synthetic Data in Git
 
 cols_symptoms <- c(
   'aggression', 'agitation', 'anergia', 'anhedonia', 'anxiety', 
@@ -274,7 +274,7 @@ net_impute <- net_impute %>%
   mutate(across(net_var, ~ scale(.x, center = T, scale = T)))
 dim(net_impute)
 
-write.csv(net_impute, "/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/final/data/residuals.csv") # This will be used in R script "2. Network.R"
+write.csv(net_impute, "residuals.csv") # This will be used in R script "2. Network.R"
 
 # Sanity checks -
 
