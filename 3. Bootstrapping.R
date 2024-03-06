@@ -21,7 +21,7 @@ library(bootnet)
 
 # Load the data 
 
-total_2yr <- read.csv("/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/total_2yr.csv") # outputted from "1.Pre-processing.R" script
+total_2yr <- read.csv("total_2yr.csv") # outputted from "1.Pre-processing.R" script
 
 network_data <- total_2yr[, grepl("aggression|agitation|anxiety|cannabis|cocaine|cognitive_impairment|delusion|disturbed_sleep|emotional_withdrawn|hopeless|guilt|\\bhallucination.1\\b|\\bhallucination.2\\b|\\bhallucination.3\\b|\\bhallucination.4\\b|\\bhallucination.5\\b|\\bhallucination.6\\b|hostility|irritability|mood|paranoia|poor_concentration|insight|poor_motivation|suicidal|tearful|current_smoking|weightloss", names(total_2yr) )]
 dim(network_data) 
@@ -181,7 +181,7 @@ sortMe <- function(x, n_v, reps = 250){
 
 # This is the only data we can provide
 
-features_boot_temporal <- readRDS("/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/features_boot_temporal.RDS") %>%
+features_boot_temporal <- readRDS("features_boot_temporal.RDS") %>%
   unlist(recursive = FALSE)
 features_boot_contempo <- readRDS("features_boot_contempo.RDS") %>%
   unlist(recursive = FALSE)
@@ -277,7 +277,7 @@ rownames(mean) <- c('aggression', 'agitation', 'anxiety', 'cannabis use', 'cocai
 
 # Load actual model estimates
 
-features_covariances <- readRDS('/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/features_covariances.RData') # This is the only data that we can provide (not individual level)
+features_covariances <- readRDS('features_covariances.RData') # This is the only data that we can provide (not individual level)
 features_temporal <- features_covariances[[1]]
 features_contemporaneous <- features_covariances[[2]]
 features_between <- features_covariances[[3]]
