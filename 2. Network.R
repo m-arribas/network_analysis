@@ -17,7 +17,7 @@ library(ggsci)
 
 # Load data
 
-network_data <- read.csv("/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/final/data/residuals.csv")  # Output from 1. Pre-processing.R script 
+network_data <- read.csv("residuals.csv")  # Output from 1. Pre-processing.R script 
 
 network_data <-  network_data[, grepl("aggression|agitation|anxiety|cannabis|cocaine|cognitive_impairment|delusion|disturbed_sleep|emotional_withdrawn|hopeless|guilt|\\bhallucination.1\\b|\\bhallucination.2\\b|\\bhallucination.3\\b|\\bhallucination.4\\b|\\bhallucination.5\\b|\\bhallucination.6\\b|hostility|irritability|mood|paranoia|poor_concentration|insight|poor_motivation|suicidal|tearful|current_smoking|weightloss", names(network_data))]
 
@@ -91,7 +91,7 @@ model_features_rec <- model_rec %>%
 
 # 3. Visualising networks ------------------------------------------------------------------------------
 
-features_covariances <- readRDS("/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/final/data/features_covariances.RData")
+features_covariances <- readRDS("features_covariances.RData")
 
 # Extract networks:
 features_temporal <- features_covariances[[1]]
