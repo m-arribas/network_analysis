@@ -14,9 +14,9 @@ library(reshape2)
 # In our case, these are called PSY (psychotic disorders), bmd (bipolar disorders) and UMD (unipolar mood disorders) 
 # These three models have the same nodes
 
-network_data_umd <- read.csv("/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/final/residuals_umd.csv")
-network_data_bmd <- read.csv("/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/final/residuals_bmd.csv")
-network_data_psy <- read.csv("/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/final/residuals_psy.csv")
+network_data_umd <- read.csv("residuals_umd.csv")
+network_data_bmd <- read.csv("residuals_bmd.csv")
+network_data_psy <- read.csv("residuals_psy.csv")
 
 # Define model parameters (these are the same across the 3 models)
 network_data <- network_data_umd[, grepl("aggression|agitation|anxiety|cannabis|cognitive_impairment|disturbed_sleep|\\bhallucination.1\\b|\\bhallucination.2\\b|\\bhallucination.3\\b|\\bhallucination.4\\b|\\bhallucination.5\\b|\\bhallucination.6\\b|irritability|mood|paranoia|poor_concentration|insight|poor_motivation|suicidal|tearful|current_smoking", names(network_data_umd) ) ]
@@ -124,7 +124,7 @@ N_perm <- 250
 list_net_impute_scaled <- list()
 start_time <- Sys.time()
 
-network_data <- read.csv("/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/total_2yr.csv") # Synthetic Data in Git
+network_data <- read.csv("total_2yr.csv") # Synthetic Data in Git
 
 set.seed(1234)
 network_data$index_diagnostic_group <- sample(c("UMD", "BMD", "PSY"), nrow(network_data), replace = TRUE)
@@ -392,30 +392,30 @@ for (p in 1:length(obs_list_temp)) {
 
 # Given the actual data ---------------------------------------------------------------
 
-load("/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/final/network_analysis/data/corrected_p_vals_matrices.RData")     # Corrected p-values - temp_umd_bmd_corrected, temp_umd_psy_corrected, temp_bmd_psy_corrected
+load("corrected_p_vals_matrices.RData")     # Corrected p-values - temp_umd_bmd_corrected, temp_umd_psy_corrected, temp_bmd_psy_corrected
 
-load("/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/final/network_analysis/data/sig_directions_matrices.RData")   # Significant directions - temp_umd_bmd_sig_directions, temp_umd_psy_sig_directions, temp_bmd_psy_sig_directions
+load("sig_directions_matrices.RData")   # Significant directions - temp_umd_bmd_sig_directions, temp_umd_psy_sig_directions, temp_bmd_psy_sig_directions
 
-load("/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/final/network_analysis/data/temp_obs_diff_matrices.RData")   # Observed differences - obs_diff_temp_umd_bmd, obs_diff_temp_umd_psy, obs_diff_temp_bmd_psy
+load("temp_obs_diff_matrices.RData")   # Observed differences - obs_diff_temp_umd_bmd, obs_diff_temp_umd_psy, obs_diff_temp_bmd_psy
 
 plot_heatmap_temp <- function(comparison) { 
   if (comparison == "temp-umd-psy") {
     title <- "Temporal heatmap for UMD-PSY"
-    filename <- paste0("/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/final/network_analysis/",comparison, ".png")  # Change this to the directory where you want to save images
+    filename <- paste0("/path/to/save/file/",comparison, ".png")  # Change this to the directory where you want to save images
     effect_sizes <-  obs_diff_temp_umd_psy
     directions <- temp_umd_psy_sig_directions
     p_values <- temp_umd_psy_corrected }
   
   else if (comparison == "temp-umd-bmd") {
     title <- "Temporal heatmap for UMD-BMD"
-    filename <- paste0("/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/final/network_analysis/",comparison, ".png")
+    filename <- paste0("/path/to/save/file/",comparison, ".png")
     effect_sizes <-  obs_diff_temp_umd_bmd
     directions <- temp_umd_bmd_sig_directions
       p_values <- temp_umd_bmd_corrected}
   
     else if (comparison == "temp-bmd-psy") {
     title <- "Temporal heatmap for BMD-PSY"
-    filename <- paste0("/Users/Arribas/Desktop/PhD/Ongoing\ projects/Network/NA\ Code/Git/final/network_analysis/",comparison, ".png")
+    filename <- paste0("/path/to/save/file/",comparison, ".png")
     effect_sizes <-  obs_diff_temp_bmd_psy
     directions <- temp_bmd_psy_sig_directions
       p_values <- temp_bmd_psy_corrected }
