@@ -1,5 +1,5 @@
-# Network Analysis 
-This repository contains the code used for data analysis in the manuscript titled *"Longitudinal evolution of the transdiagnostic prodrome to severe mental disorders: a dynamic temporal network analysis informed by natural language processing and electronic health records"* by Arribas et al (under review). The purpose of this project is to provide a **transparent** and **reproducible** method for analyzing the data presented in our publication, as well as making our code publically avaiable for researchers interested in using network analyses with their own databases.
+![image](https://github.com/m-arribas/network_analysis/assets/82834670/d1f4650b-0622-4b54-9e7c-1ad2ff538e69)# Network Analysis 
+This repository contains the code used for data analysis in the manuscript titled *"Longitudinal evolution of the transdiagnostic prodrome to severe mental disorders: a dynamic temporal network analysis informed by natural language processing and electronic health records"* by Arribas et al (under review, pre-print: doi:10.1101/2024.03.08.24303965). The purpose of this project is to provide a **transparent** and **reproducible** method for analyzing the data presented in our publication, as well as making our code publically avaiable for researchers interested in using network analyses with their own databases.
 
 Network analysis allows us to statistically model the relationships between nodes connected by edges (directed and undirected relationships) within a network and how these change over time. Weak, sparsely connected networks are more modifiable, while stronger, densely connected networks resist change and need greater disruption through higher intensity interventions to alter the state. Furthermore, edge estimates for temporal nodes may indicate directed causality between network nodes. Similarly, the centrality of a node, which represents the relative strength of connections in and out of the node, may signal the importance of that node to the system. 
 
@@ -34,6 +34,8 @@ Since this project is associated with a submitted manuscript, modifications migh
 
 ## Manuscript Citation
 Please cite our manuscript as follows if you use our code or analysis:
+
+Arribas M, Barnby J, Patel R, et al. Longitudinal evolution of the transdiagnostic prodrome to severe mental disorders: a dynamic temporal network analysis informed by natural language processing and electronic health records. Published online March 9, 2024:2024.03.08.24303965. doi:10.1101/2024.03.08.24303965
 
 ## Authors
 Maite Arribas - Initial Analysis and Development - m-arribas
