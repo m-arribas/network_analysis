@@ -21,7 +21,7 @@ These instructions will guide you through setting up the project and running the
 The scripts are all written in R. Please make sure you have installed the libraries which are loaded at the start of each script. 
 
 ### Running the Analysis
-The code is divided into 5 parts. Each script will depend on data files outputted from previous scripts:
+The code is divided into 6 parts. Each script will depend on data files outputted from previous scripts:
 
 - "0. Synth_data.R" : code generates synthetic data and outputs it as "dynamic_syn.csv" file
 - "1. Pre-processing.R" : requires the "dynamic_syn.csv" file. Pre-processes the data and outputs it as "residuals.csv" and "total_2yr.csv"
