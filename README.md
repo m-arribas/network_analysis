@@ -28,6 +28,7 @@ The code is divided into 5 parts. Each script will depend on data files outputte
 - "2. Network.R": builds the models using the "residuals.csv" file and visualises actual networks using "features_covariances.RData" 
 - "3. Bootstrapping.R": model bootstrapping using the "total_2yr.csv" file. Actual model vs bootstrapped estimates can be visualised using "features_boot_temporal.RDS"
 - "4. Permutation.R": requires "total_2yr.csv" and files provided in the /data/perm folder. Permuted results can be visualised as heatmaps.
+- "5. Community.R": requires files provided in the /data/perm folder. Node-node covariance across communitues can be visualised as heatmaps.
 
 ## Contributing
 Since this project is associated with a submitted manuscript, modifications might be limited. However, if you find any bugs or have suggestions, please open an issue in the repository.
